@@ -1,0 +1,27 @@
+{
+  "name": "electron-koa-app-builder",
+  "description": "Builder for Electron Koa App",
+  "version": "0.0.0",
+  "author": "Chris Veness",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisveness/electron-koa-app"
+  },
+  "scripts": {
+    "start": "electron main.js",
+    "dist": "build",
+    "postinstall": "install-app-deps"
+  },
+  "build": {
+    "appId": "koa-app.id",
+    "category": "public.app-category.developer-tools",
+    "win": {
+      "iconUrl": "http://eatodo.s3.amazonaws.com/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^1.4.1",
+    "electron-builder": "^7.3.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "koa-hello-world",
+  "description": "Koa 'hello world' app",
+  "version": "0.0.0",
+  "author": "Chris Veness",
+  "license": "MIT",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "koa": "^1.2.4",
+    "koa-handlebars": "^0.5.7",
+    "koa-router": "^5.4.0"
+  }
+}
