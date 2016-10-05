@@ -39,4 +39,4 @@ Thx to [JDM](http://github.com/theallmightyjohnmanning/electron-express),
 [electron-builder](https://github.com/electron-userland/electron-builder).
 
 Koa and Electron are still both rather moving targets. This was developed with Koa v1.2.4 and 
-Electron v1.4.1.
+Electron v1.4.2.
