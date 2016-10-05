@@ -28,12 +28,14 @@ To run the app in Electron
 
     npm start
 
-To build a stand-alone executable
--------------------------------
+To build a stand-alone Windows executable
+-----------------------------------------
 
-    npm run dist --win --x64
+    npm run dist -- --win --x64
 
 (in theory: I have still to make this work... PRs welcome...)
+
+(note that hyphens in the app ‘name’ (in app/package.json) maybe breaks the Windows builder?)
 
 Thx to [JDM](http://github.com/theallmightyjohnmanning/electron-express), 
 [electron-builder](https://github.com/electron-userland/electron-builder).
