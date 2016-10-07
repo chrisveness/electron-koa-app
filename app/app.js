@@ -15,7 +15,7 @@ app.use(handlebars({
 }));
 
 router.get('/', function*() {
-    const context = { version: process.version, time: new Date() };
+    const context = { version: process.version, env: app.env, time: new Date() };
     console.log('router.get /', context);
     yield this.render('hello-world.html', context);
 });

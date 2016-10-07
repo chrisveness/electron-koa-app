@@ -10,6 +10,8 @@ if (handleSquirrelCommand()) return; // squirrel event handled, app will exit in
 
 let win = null; // keep global reference to window object to avoid automatic closing on JS GC
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'production'; // default to production environment
+
 const shouldQuit = app.makeSingleInstance(function(otherInstArgv, otherInstWorkingDir) {
     // someone tried to run a second instance, we should focus our window
     if (win != null) {
