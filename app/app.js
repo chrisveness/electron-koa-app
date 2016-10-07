@@ -22,5 +22,5 @@ router.get('/', function*() {
 
 app.use(router.routes());
 
-app.listen(3001);                 // note: don't use "if (!module.parent)"!
-console.log('listening on 3001');
+app.listen(3000);                      // note: don't use "if (!module.parent)"!
+console.log('listening on port 3000');
