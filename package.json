@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "electron app/main.js",
-    "dist": "build",
+    "build": "build",
     "postinstall": "install-app-deps"
   },
   "build": {
