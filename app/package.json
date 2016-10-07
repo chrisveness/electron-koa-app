@@ -5,6 +5,9 @@
   "author": "Chris Veness",
   "license": "MIT",
   "main": "main.js",
+  "scripts": {
+    "start-dev": "node app.js"
+  },
   "dependencies": {
     "koa": "^1.2.4",
     "koa-handlebars": "^0.5.7",
