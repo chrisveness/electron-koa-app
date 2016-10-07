@@ -8,11 +8,29 @@ const path = require('path');                       // nodejs.org/api/path.html
 
 let win = null; // keep global reference to window object to avoid automatic closing on JS GC
 
-function createWindow() {
-    if (handleSquirrelCommand()) return;
+if (handleSquirrelCommand() === true) {
+    // squirrel event handled and app will exit in 1000ms, so don't do anything else
+    return;
+} else {
+    const shouldQuit = app.makeSingleInstance(function (otherInstArgv, otherInstWorkingDir) {
+        // someone tried to run a second instance, we should focus our window
+        if (win != null) {
+            if (win.isMinimized() === true) {
+                win.restore();
+            }
 
+            win.focus();
+        }
+    });
+
+    if (shouldQuit === true) {
+        app.quit();
+    }
+}
+
+function createWindow() {
     console.log('createWindow');
-    app.server = require('./app/app.js');                  // instantiate Koa app
+    app.server = require('./app.js');                  // instantiate Koa app
     win = new BrowserWindow({ width: 1024, height: 768 }); // create browser window
     win.loadURL('http://localhost:3001');                  // load koa-app home page
     win.on('closed', () => { win = null; });               // dereference window object
