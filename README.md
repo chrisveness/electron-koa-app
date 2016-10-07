@@ -19,9 +19,9 @@ To run the app in browser
 -------------------------
 
     cd app
-    npm start
+    npm run start-dev
 
-and open `localhost:3001` in your browser.
+and open `localhost:3000` in your browser.
 
 To run the app in Electron
 --------------------------
@@ -31,14 +31,13 @@ To run the app in Electron
 To build a stand-alone Windows executable
 -----------------------------------------
 
-    npm run dist -- --win --x64
+    npm run build -- --win --x64
 
-(in theory: I have still to make this work... PRs welcome...)
-
-(note that hyphens in the app ‘name’ (in app/package.json) maybe breaks the Windows builder?)
+which generates a setup file in the `dist\win` directory (only tested on Windows for Windows).
 
 Thx to [JDM](http://github.com/theallmightyjohnmanning/electron-express), 
+[eriedl](https://github.com/electron-userland/electron-builder/issues/796#issuecomment-252152108), 
 [electron-builder](https://github.com/electron-userland/electron-builder).
 
 Koa and Electron are still both rather moving targets. This was developed with Koa v1.2.4 and 
-Electron v1.4.2.
+Electron v1.4.2, electron-builder v7.10.2.
