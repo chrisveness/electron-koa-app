@@ -9,7 +9,7 @@
     "url": "https://github.com/chrisveness/electron-koa-app"
   },
   "scripts": {
-    "start": "electron main.js",
+    "start": "electron app/main.js",
     "dist": "build",
     "postinstall": "install-app-deps"
   },
